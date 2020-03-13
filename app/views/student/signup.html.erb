@@ -1,3 +1,4 @@
+  <!--sign up form for students-->
 <section id="studentsignup">
 
     <div id="student-signup-form">
@@ -50,7 +51,7 @@
                     <%= ff.text_field :country, required: true%>
                 </p>
            <% end %>
-
+            
             <%= form.submit "Next", class: "btn btn-success", id: "studentsignup-button"%>
 
             <%= link_to "Next-test", new_user_registration_path(

@@ -1,8 +1,11 @@
+
+
 <section id="content">
      <!--main container-->
     <main id= "main">
     <%= image_tag 'ilmwallpaper.png', alt:"ilmwallpaper" , id:"ilm-wallpaper"%>
-    <div class='container'>
+      <!--if user is not defined as instructor yet-->
+     <div class='container'>
      <% if user_signed_in? %>
             <% if (!current_user.instructor_id)  %>
             <p><%= link_to 'new instructor', new_instructor_path, class:"top-nav-link"%>

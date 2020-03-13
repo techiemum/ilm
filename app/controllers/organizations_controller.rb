@@ -5,13 +5,11 @@ class OrganizationsController < ApplicationController
     end
 
     #create new organization
-
     def new
         @organization = Organization.new
     end
 
-    #create organization
-    
+    #create organization    
     def create
         @organization = Organization.new
         @organization.name = params[:organization][:name] 

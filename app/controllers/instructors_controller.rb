@@ -12,10 +12,12 @@ class InstructorsController < ApplicationController
        
     end
     
+    # new instructor
     def new
         @instructor = Instructor.new 
     end
 
+    # create new instructor and save
     def create
         instructor = Instructor.new
         instructor.name= params[:instructor][:name]
@@ -28,6 +30,7 @@ class InstructorsController < ApplicationController
 
     end
     
+    #method for picture adding to profile
     def picture
         
     end

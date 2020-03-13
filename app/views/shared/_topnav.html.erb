@@ -1,11 +1,13 @@
 <header class="top-nav">
- <%# <div class ="logo">  <!--logo placement-->
-<%= image_tag "ilmlogo.png", id: "logo-image"%>
-<%# </div> %> 
 
-    <% if user_signed_in? %>
-     <p><div id="logout"><%= link_to 'Logout', destroy_user_session_path, method: "delete",class:"top-nav-link"%></div>
+<!--main container-->
+<% if user_signed_in? %>
+      
+    <!--display limnk for logout if user is signed in-->
+    <p><div id="logout"><%= link_to 'Logout', destroy_user_session_path, method: "delete",class:"top-nav-link"%></div>
     <div id="username"><%= current_user.email %></div>
+    
+    <!--navigation links if user is signed in-->
     <%= link_to 'Home', root_path, class:"top-nav-link"%>
     <%= link_to 'Instructors', instructors_path, class:"top-nav-link"%>
     <%= link_to 'Courses', courses_path, class:"top-nav-link"%>
@@ -16,10 +18,15 @@
     <!-- Calendly link widget end -->
     <%= link_to 'Organizations', organizations_path, class:"top-nav-link"%> 
     <%= link_to 'Contact us', contactus_path, class:"top-nav-link"%></p>
-    <% else %>
+
+<% else %>
+
+    <!--limited links to display if user is not signed in-->
     <p><%= link_to 'Home', root_path, class:"top-nav-link"%>
     <%= link_to 'Login', new_user_session_path, class:"top-nav-link"%>
     <%= link_to 'Sign Up', new_user_registration_path, class:"top-nav-link"%></p>
     <%= link_to 'Contact us', contactus_path, class:"top-nav-link"%></p>
+    
     <% end %>
+
 </header>

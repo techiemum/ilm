@@ -1,3 +1,5 @@
+
+<!--creating new course link is only available to instructor other user can not create new course-->
 <% if user_signed_in? %>
     <% if (!current_user.instructor_id)  %>
         <p><%= link_to 'new course', new_course_path%></p>       
@@ -6,6 +8,7 @@
     <% end %>
 <% end %>
 
+<!--display the course data -->
 <% @courses.each do |course| %>
     <p><%=course.course_name%></p>
     <p><%=course.description%></p>
