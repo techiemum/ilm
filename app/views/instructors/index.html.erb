@@ -1,0 +1,10 @@
+<h2>Instructors</h2>
+
+<%if @instructors %>
+    <% @instructors.each do |instructor|%>
+        <p><%= link_to instructor.name, instructor_path(instructor) %></p>
+        <p><%=instructor.bio%></p>
+    <%end%>
+<%end%>
+
+  

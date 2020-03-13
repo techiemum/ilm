@@ -1,0 +1,17 @@
+<%= form_with model: @organization do |form| %>
+    <p>
+        <%= label(:name, "organization name") %>
+        <%= form.text_field :name, required: true, minlength: 1 %>
+    </p>
+    <p>
+        <%= label(:contact_no, 'contact number') %>
+        <%= form.text_field :description %>
+    </p>
+    
+    <p>
+        <%= label(:email, 'email') %>
+       <%= form.text_field :cost %>
+    </p>
+    
+    <%= form.submit "new organization", class: "btn btn-success"%>
+<% end %>

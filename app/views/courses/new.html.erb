@@ -1,0 +1,17 @@
+<%= form_with model: @course do |form| %>
+    <p>
+        <%= label(:course_name, "course name") %>
+        <%= form.text_field :course_name, required: true, minlength: 1 %>
+    </p>
+    <p>
+        <%= label(:description, 'description') %>
+        <%= form.text_field :description %>
+    </p>
+    
+    <p>
+        <%= label(:cost, 'cost') %>
+       <%= form.text_field :cost %>
+    </p>
+    
+    <%= form.submit "new course", class: "btn btn-success"%>
+<% end %>

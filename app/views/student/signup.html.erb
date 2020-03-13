@@ -1,0 +1,64 @@
+<section id="studentsignup">
+
+    <div id="student-signup-form">
+        <h1> Student Sign Up</h1>
+        <%= form_with model: @student , url: create_student_signup_path, method: :post  do |form| %>
+            <p>
+                <%= form.label(:first_name, "First Name:") %>
+                <br/>
+                <%= form.text_field :first_name, required: true%>
+            </p>
+            <p>
+                <%= form.label(:last_name, "Last Name:") %>
+                <br/>
+                <%= form.text_field :last_name, required: true%>
+            </p>
+            <%= form.fields_for :address do |ff| %>
+                <p>
+                    <%= ff.label(:number, "Unit Street No.") %>
+                    <br/>
+                    <%= ff.number_field :number, required: true%>
+                </p>
+                <p>
+                    <%= ff.label(:street, "Street") %>
+                    <br/>
+                    <%= ff.text_field :street, required: true%>
+                </p>
+                <p>
+                    <%= ff.label(:suburb, "Suburb") %>
+                    <br/>
+                    <%= ff.text_field :suburb, required: true%>
+                </p>
+                <p>
+                    <%= ff.label(:city, "City") %>
+                    <br/>
+                    <%= ff.text_field :city, required: true%>
+                </p>
+                <p>
+                    <%= ff.label(:state, "State") %>
+                    <br/>
+                    <%= ff.text_field :state, required: true%>
+                </p>
+                <p>
+                    <%= ff.label(:postcode, "Postcode") %>
+                    <br/>
+                    <%= ff.number_field :postcode, required: true%>
+                </p>
+                <p>
+                    <%= ff.label(:country, "Country") %>
+                    <br/>
+                    <%= ff.text_field :country, required: true%>
+                </p>
+           <% end %>
+
+            <%= form.submit "Next", class: "btn btn-success", id: "studentsignup-button"%>
+
+            <%= link_to "Next-test", new_user_registration_path(
+                :first_name => params[:first_name]
+            ), class:"btn btn-success" %>
+            
+        <% end %> 
+    </div>
+
+   
+</section>

@@ -1,0 +1,17 @@
+<%= form_with model: @instructor do |form| %>
+    <p>
+        <%= label(:name, "Name") %>
+        <%= form.text_field :name, required: true, minlength: 1 %>
+    </p>
+    <p>
+        <%= label(:bio, 'Bio') %>
+        <%= form.text_field :bio %>
+    </p>
+    
+    <p>
+        <%= label(:picture, 'picture') %>
+        <%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg'%>
+    </p>
+    
+    <%= form.submit "Become instructor", class: "btn btn-success"%>
+<% end %>
