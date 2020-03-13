@@ -3,6 +3,7 @@
 <%if @instructors %>
     <% @instructors.each do |instructor|%>
         <p><%= link_to instructor.name, instructor_path(instructor) %></p>
+        <%= image_tag instructor.picture, class: 'img-thumbnail box', width: 120 if instructor.picture.attached? %>
         <p><%=instructor.bio%></p>
     <%end%>
 <%end%>

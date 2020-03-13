@@ -1,12 +1,15 @@
 class InstructorsController < ApplicationController
+   
+    #index page for all instructors
     def index
     @instructors = Instructor.all
     end
     
+    #show instructors id wise
     def show
 
         @instructor = Instructor.find(params[:id])
-        
+       
     end
     
     def new

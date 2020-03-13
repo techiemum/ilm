@@ -1,5 +1,12 @@
 class HomeController < ApplicationController
+    
+    #index 
     def index
-        p current_user
     end
+
+    #user types whether student or instructor
+    def usertype
+    end
+
+
 end

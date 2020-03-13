@@ -2,7 +2,7 @@
     <% if (!current_user.instructor_id)  %>
         <p><%= link_to 'new course', new_course_path%></p>       
     <% else %>
-        redirect_to courses_path
+        <%= redirect_to courses_path %>
     <% end %>
 <% end %>
 

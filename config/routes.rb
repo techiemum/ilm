@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/student/signup", to: "student#signup", as: "student_signup"
   post "/student/signup", to: "student#create", as: "create_student_signup"
 
+  get "/usertype", to: "home#usertype", as: "usertype"
  
   #page for instructor
   get "/index/instructors", to: "instructors#index", as:"instructors"

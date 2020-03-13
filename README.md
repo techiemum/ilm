@@ -45,7 +45,7 @@ It would be beneficial for the both the ends.
 
 ### A link (URL) to your deployed app (i.e. website)
 
-
+https://ilm-project.herokuapp.com/ 
 
 ### A link to your GitHub repository (repo)
 
@@ -78,12 +78,20 @@ https://github.com/techiemum/ilm
     
 * Sitemap
 
-    ![Sitemap](app/assets/images/sitemap.jpg)
+![Sitemap](app/assets/images/sitemap.jpg)
 
     https://www.gloomaps.com/KjVT6fbGAG
 
 * Screenshots
 
+![Screenshots](app/assets/images/websitepage1.jpg)
+![Screenshots](app/assets/images/websitequetpage.jpg)
+![Screenshots](app/assets/images/websiteinstructorinfo.jpg)
+![Screenshots](app/assets/images/bookingpage.jpg)
+![Screenshots](app/assets/images/homem.png)
+![Screenshots](app/assets/images/ihom.png)
+![Screenshots](app/assets/images/bookm.png)
+![Screenshots](app/assets/images/mob.png)
 
 * Target audience
 
@@ -155,9 +163,10 @@ https://github.com/techiemum/ilm
 
     The instructor and student tables are associated with the User table with user_id reference as
 it serves to hold additional information about the user, the student belongs_to a user and instructor 
-also belong to a user. Organizations will be seprate table holds basic information
+also belong to a user. Organizations will be septate table holds basic information
 The course table is a table that connects student_ids and instructor_id from respective tables, one from the mentee and the other from the mentor (both are users) therefore belongs_to a user.
 course belongs_to student and instructor and both user and instructor has_many courses.
+ 
             
 ### Discuss the database relations to be implemented in your application
 
@@ -169,6 +178,9 @@ FK of student table and organization table as a FK. Organization and student
 both use the same table of address to normalize the database.
 ### Provide your database schema design
 
+dbeaver is not generating all the connections so provided connections by using lines.
+
+![schema](app/assets/images/schema.png)
 
 
 ### Describe the way tasks are allocated and tracked in your project

@@ -2,11 +2,7 @@
      <!--main container-->
     <main id= "main">
     <%= image_tag 'ilmwallpaper.png', alt:"ilmwallpaper" , id:"ilm-wallpaper"%>
-    
-    </main>
-    
-
-    
+    <div class='container'>
      <% if user_signed_in? %>
             <% if (!current_user.instructor_id)  %>
             <p><%= link_to 'new instructor', new_instructor_path, class:"top-nav-link"%>
@@ -15,6 +11,12 @@
               
             <% end %>
         <% end %>
+    </div>
+    </main>
+    
+
+    
+    
 
    
 
