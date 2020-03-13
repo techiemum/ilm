@@ -13,13 +13,15 @@ class StudentController < ApplicationController
     student.address = params[:student][:address] 
     student.save!
 
-    if student.save
-        redirect_to root_path
-    else
+        if student.save
+            redirect_to root_path
+        else
+        end
     end
+
 
     def submit
 
     end
 
-    end
+end
